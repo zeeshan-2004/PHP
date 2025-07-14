@@ -57,6 +57,10 @@ if ($_SERVER["REQUEST_METHOD"]=='POST'){
 ?>
 <div class="container">
 <form action="/zeeshan/get-post/index.php" method="post">
+   <div class="mb-3">
+    <label for="text" class="form-label">Your Name</label>
+    <input type="text" name="text" class="form-control" id="text" onpaste="return false;" aria-describedby="emailHelp">
+  </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
     <input type="email" name="email" class="form-control" id="email" onpaste="return false;" aria-describedby="emailHelp">
