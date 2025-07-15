@@ -19,6 +19,7 @@ echo " connection was successful";
    $b=33105;
   $sql="INSERT INTO `user` (`id`,`name`, `cnic`, `gender`, `mobileNo`) 
    VALUES ('3','ali', '33104', 'male', '0326')"; 
+   //variables to be inserted into records
    $sql="INSERT INTO `user` (`id`,`name`, `cnic`, `gender`, `mobileNo`) 
     VALUE
      ('6','$a', '$b', 'male', '0326')";

@@ -18,14 +18,14 @@ else{
 
 
  //create db using procedarl
-// $sql="CREATE DATABASE third";
-// if(mysqli_query($conn,$sql)){
-//  echo "database created successfully";
-// }
-// else{
-//     echo "database not created successfully".mysqli_error($conn);
-// }
-//  echo "<br>";
+$sql="CREATE DATABASE third";
+if(mysqli_query($conn,$sql)){
+ echo "database created successfully";
+}
+else{
+    echo "database not created successfully".mysqli_error($conn);
+}
+ echo "<br>";
 
 //create table 
 $sql="CREATE TABLE train(
@@ -41,5 +41,14 @@ if(mysqli_query($conn,$sql)){
 else{
     echo "database not created successfully".mysqli_error($conn);
 }
-
+ echo "<br>";
+$s='INSERT INTO train(no,name,distance,source,destination)
+VALUES
+(1130,"express","839KM","PESHAWAR CANTT","QUETTA")';
+if(mysqli_query($conn,$s)){
+ echo "record iserted created successfully";
+}
+else{
+    echo "record iserted not created successfully".mysqli_error($conn);
+}
 ?>
