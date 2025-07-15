@@ -6,6 +6,7 @@ $username="root";//default
 $servername="localhost";
 $password="";// blank not even space
 //create connection 
+//mysqli_connect(host, username, password, database);
 $conn=mysqli_connect($servername,$username,$password);
 //test connection
 if(!$conn){
@@ -22,10 +23,13 @@ $sql="CREATE DATABASE first";
 echo var_dump($result);*/
       echo "<br>";
 //test connection
+//mysqli_query(connection, query, resultmode(optiponal)) 
 if(mysqli_query($conn,$sql)){
     echo "database created successfully";
 }
  else{
          echo "database not created successfully ".mysqli_error($conn); 
     }
+
+    
 ?>
