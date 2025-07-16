@@ -39,4 +39,5 @@ echo "<br>";
 
 const age=22;
 echo age;
+
 ?>

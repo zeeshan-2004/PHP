@@ -12,6 +12,7 @@ echo " connection was successful";
    echo "<br>";
    //selelct table
 $sql="SELECT * FROM `tocontact`";
+//$sql="SELECT * FROM `tocontact` WHERE `name`='zeeshan'"; using where clause to extract data
 //send query
 $result=mysqli_query($conn,$sql);
 //print no of rows 
@@ -19,7 +20,7 @@ $result=mysqli_query($conn,$sql);
  echo $num;
     echo " records found in the database <br>";
  // display data of row
- if($num>0){
+ if($num>0){   //if record not zero
      /*one row for one command
     $row=mysqli_fetch_assoc($result);
     echo var_dump($row);
