@@ -5,7 +5,7 @@ echo "while loop";
 $i=1;
 while($i<=5){
     echo $i;
-    echo "<br>";
+    echo " ";
     $i++;
 
 }
@@ -13,7 +13,7 @@ while($i<=5){
  $b=1;
 while($b<=5){
     echo $b;
-    echo "<br>";
+    echo " ";
     $b+=2;
 
 }
@@ -24,7 +24,7 @@ while($b<=5){
  }
  echo "<br>";
  //nested loop
- for($i=1;$i<=100;$i+=10){
+ for($i=1;$i<=50;$i+=10){
     for ($j=$i; $j <$i+10 ; $j++) { 
    echo $j." ";
     }
@@ -52,4 +52,32 @@ foreach($arr as $x){
     echo $x;
      echo "<br>";
 }
+
+// countinue
+for ($i=1; $i <= 5; $i++) { 
+    if($i==3){
+        echo  "<br>";
+        continue; // skip 3
+    }
+echo "number is :".$i . "<br>";
+}
+  echo "<br>";
+//break
+for ($i=1; $i <= 10; $i++) { 
+    if($i==3){
+      break;// breajk at 2
+         
+    }
+echo "number is :".$i . "<br>";
+}
+//goto 
+echo "hello world 1";
+echo "hello world 2";
+goto abc;
+echo "hello world 3";
+echo "hello world 4";
+abc:
+echo " this is label abc";
+
+
 ?>
