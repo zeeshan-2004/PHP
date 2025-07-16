@@ -17,7 +17,15 @@ $fa=false;
 echo $tr;
 echo "<br>";
 echo $fa;
-
+echo "<br>";
+//constant variable
+//define(name, value);
+define("name","zeeshan");
+echo name;
+echo "<br>";
+const age=22;
+echo age;
+echo "<br>";
 // var_dump() for data type and value of variable
 var_dump($fa);
 echo "<br>";
