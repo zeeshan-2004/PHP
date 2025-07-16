@@ -23,6 +23,14 @@ while($b<=5){
     echo "this is for loop $i <br>";
  }
  echo "<br>";
+ //nested loop
+ for($i=1;$i<=100;$i+=10){
+    for ($j=$i; $j <$i+10 ; $j++) { 
+   echo $j." ";
+    }
+     echo "<br>";
+ }
+  echo "<br>";
  echo "this is do while";
   echo "<br>";
  $c=90;
