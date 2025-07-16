@@ -49,4 +49,19 @@ echo "index arrays";
             };
 /*Each row: $multi[0], $multi[1], $multi[2]
 Each column: $multi[i][0], $multi[i][1], $multi[i][2]*/
+   echo "<br>";
+   //makes that structure using for loop easy and simple way
+echo "<table border='0' cellpadding='10' cellspacing='0' style='border-collapse: collapse; text-align: center;'>";
+$num = 1;
+for ($i = 0; $i < 4; $i++) {
+    echo "<tr>";
+    for ($j = 0; $j < 4; $j++) {
+        echo "<td>$num</td>";
+        $num++;
+    }
+    echo "</tr>";
+}
+
+echo "</table>";
+
 ?>
