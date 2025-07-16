@@ -29,7 +29,9 @@ if(!$conn){
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>';
     }
-    
+
+
+
 }
 ?>
 <!DOCTYPE html>
@@ -78,6 +80,25 @@ if(!$conn){
   </div>
 </nav>
 
+<div class="container">
+<form action="/zeeshan/sql/form.php" method="post">
+   <div class="mb-3">
+    <label for="name" class="form-label">Your Name</label>
+    <input type="text" name="name" class="form-control" id="name" onpaste="return false;" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="email" onpaste="return false;" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="des" class="form-label">description</label>
+    <textarea name="des" class="form-control" id="des" rows="5" cols="20" onpaste="return false;"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
 <div class="container">
 <form action="/zeeshan/sql/form.php" method="post">
    <div class="mb-3">
