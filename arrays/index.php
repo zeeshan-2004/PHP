@@ -39,9 +39,9 @@ echo "index arrays";
             
               //printing only values in tabular form
 
-          for ($i=0; $i <count($multi) ; $i++) { 
-            for ($j=0; $j < count($multi[$i]);$j++) { 
-                echo $multi[$i][$j];
+          for ($row=0; $row <count($multi) ; $row++) { 
+            for ($col=0; $col < count($multi[$row]);$col++) { 
+                echo $multi[$row][$col];
                 echo " ";
             }
             
@@ -50,8 +50,35 @@ echo "index arrays";
 /*Each row: $multi[0], $multi[1], $multi[2]
 Each column: $multi[i][0], $multi[i][1], $multi[i][2]*/
    echo "<br>";
-   //makes that structure using for loop easy and simple way
-echo "<table border='0' cellpadding='10' cellspacing='0' style='border-collapse: collapse; text-align: center;'>";
+   $empl=[
+    [1,"ali","manager",30000],
+    [2,"zeeshan","owner",200000],
+   [3,"hassan","operator",40000]
+   ];
+   /*echo "<pre>";
+   print_r($empl);
+   echo "</pre>";*/   //make more readable  strucure of array
+
+     //printing  values in complete table form 
+
+
+     echo "<table border='1' cellpadding='10' cellspacing='1' style=text-align:center;>";
+     echo " <th>imp id </th>
+     <th>imp name</th>
+    <th>imp profession</th>
+    <th>imp salary</th> ";
+            foreach($empl as $row){  // will copy all value in otuer row
+              echo "<tr>";
+
+              foreach($row as $col){  // will copy iner value of  row 
+                echo "<td>$col</td>";
+              }
+                      echo "<tr>";
+            }
+            echo "</table>";
+              echo "<br>";
+   //makes that structure using for loop 
+echo "<table border='1' cellpadding='10' cellspacing='0' style='border-collapse: collapse; text-align: center;'>";
 $num = 1;
 for ($i = 0; $i < 4; $i++) {
     echo "<tr>";
@@ -63,5 +90,31 @@ for ($i = 0; $i < 4; $i++) {
 }
 
 echo "</table>";
+   echo "<br>";
+//multidimensional associative array
+$student=[
+ "zeeshan" =>["computer"=>90,"math"=>80,"physics"=>70],
+ "ali" =>["computer"=>90,"math"=>80,"physics"=>70],
+ "hassaan" =>["computer"=>90,"math"=>80,"physics"=>70],
+];
+/*echo "<pre>";
+   print_r($student);
+   echo "</pre>";*/
+     echo "<table border='1' cellpadding='10' cellspacing='1' style=text-align:center;>";
+          echo " <th>student id </th>
+     <th>physics </th>
+    <th>math</th>
+    <th>chemistry</th> ";
+   foreach($student as $outer=>$key){
+    echo "<tr>
+    <td>$outer</td>";
+         foreach($key as $inner){
+   echo "<td>$inner</td>";
+   echo " ";
+       }
+       echo "</tr>";
+  
 
+   }
+   echo "</table>";
 ?>
