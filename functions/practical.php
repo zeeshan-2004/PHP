@@ -65,4 +65,13 @@ echo $s;
  }
  $d=cap("ahsan", "ali");
  echo $d;
+ //call by value
+ function val($a){
+$a="hy";
+echo $a;
+ }
+ $b="hello";
+val($b);
+echo $b;
+
 ?>

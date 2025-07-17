@@ -1,4 +1,9 @@
 <?php
+/*$fir=5;
+$sec="5 fin";
+$lat=$fir+$sec;
+echo $lat; */
+ echo "<br>";
 echo "functions";
  echo "<br>";
  function marks($m){
@@ -17,6 +22,7 @@ echo "functions";
     }
     return $sum/$avg;
  }
+
  $umar=[100,50,50,100];
  $ahsan=[100,80,20,50];
  $result=marks($umar);
@@ -25,7 +31,55 @@ echo "functions";
  $fin=avg($ahsan);
  echo "marks for umar are  $result and average is $res <br>" ;
  echo "marks for ahsan are  $final and average is $fin <br>" ;
-
+  echo "<br>";
+   //call by value
+ function val($a){
+$a="hy";
+echo $a;
+ echo "<br>";
+ }
+ $val="hello";
+val($val);
+echo $val; //heloo
+ echo "<br>";
+ //call by refrence 
+  function ref(&$a){  //store address 
+$a="hy";
+echo $a;
+ echo "<br>";
+ }
+ $ref="hello";
+ ref($ref);
+ echo $ref; //hy
+ echo "<br>";
+ //vavriable function 
+ function vari(){
+   echo "hello";
+ }
+ $x="vari";
+ $x();
+   echo "<br>";
+ function var1($a){
+ echo $a;
+ }
+ $y="var1";
+ $y("this is func var");
+  echo "<br>";
+$var2=function($a){
+   echo $a;
+};
+$var2("this is var function method");
+ echo "<br>";
+//recursive function
+function rec($num){
+   if($num <5){
+      echo $num;
+        rec($num+1);
+   }
+ 
+}
+rec(1);
+  echo "<br>";
  //date functions
  echo "date functions <br>";
  echo date("dS D l j F");
