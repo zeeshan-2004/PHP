@@ -2,6 +2,9 @@
 echo "index arrays";
   echo "<br>";
  $ar=array("banana","apple","lichi");
+ echo count($ar);   
+    echo sizeof($ar); //same return
+        echo "<br>";
  foreach($ar as $b){
     echo $b;
      echo "<br>";
@@ -23,6 +26,8 @@ echo "index arrays";
             array(9,10,11)
 
          );
+         echo count($multi,1);
+            echo "<br>";
         echo var_dump( $multi);
             echo "<br>";
             echo $multi[0][0]; //1
@@ -97,15 +102,19 @@ $student=[
  "ali" =>["computer"=>90,"math"=>80,"physics"=>70],
  "hassaan" =>["computer"=>90,"math"=>80,"physics"=>70],
 ];
+echo count($student['zeeshan'],1);
 /*echo "<pre>";
    print_r($student);
    echo "</pre>";*/
      echo "<table border='1' cellpadding='10' cellspacing='1' style=text-align:center;>";
-          echo " <th>student id </th>
+          echo " <tr>
+          <th>student id </th>
      <th>physics </th>
     <th>math</th>
-    <th>chemistry</th> ";
+    <th>chemistry</th> 
+    </tr>";
    foreach($student as $outer=>$key){
+    // echo $outer;  check outer keys
     echo "<tr>
     <td>$outer</td>";
          foreach($key as $inner){
@@ -117,4 +126,22 @@ $student=[
 
    }
    echo "</table>";
+
+   // list function
+   foreach($empl as list($a,$b,$c,$d)){
+  echo "$a $b $c $d <br>";   
+   }
+   //in tabbular
+    echo "<table border='1' cellpadding='10' cellspacing='1' style=text-align:center;>";
+         echo " <th>imp id </th>
+     <th>imp name</th>
+    <th>imp profession</th>
+    <th>imp salary</th> ";
+   foreach($empl as list($a,$b,$c,$d)){
+  echo "<tr> <td>$a</td>  <td>$b</td>  <td>$c</td>  <td>$d</td> </tr><br>";  
+   }
+      echo "</table>";
+   /*1 ali manager 30000
+   2 zeeshan owner 200000
+   3 hassan operator 40000*/
 ?>
