@@ -47,6 +47,36 @@ $arr5=[
     'c'=>['where',]
 
 ];
+
 $fin2=array_replace_recursive($arr4,$arr5);
 print_r($fin2);
+echo "<br>";
+// array_pop( ) delte last element of array
+array_pop($arr3);
+print_r($arr3);
+echo "<br>";
+//array_push will add elements in last
+array_push($arr3,"pink","purple");
+print_r($arr3);
+echo "<br>";
+//array_shift will reomve first element 
+array_shift($arr3);
+print_r($arr3);
+echo "<br>";
+//array_unshift add elements in start
+$ab=array_unshift($arr3,"grey","black");
+print_r($arr3);
+print_r($arr3);
+echo "<br>";
+//array_merge  ( ) will merge two arrays
+$arr6=['mobile','tablet'];
+$newar=array_merge($arr2,$arr3,$arr4);// index and mutidimension
+$newar1=array_merge($arr2,$arr3,$arr1);// index andassociative
+$newar2=array_merge($arr4,$arr5);// associative itslf
+
+print_r($newar);
+echo "<br>";
+print_r($newar1);
+echo "<br>";
+print_r($newar2);
 ?>
