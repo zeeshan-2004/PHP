@@ -73,10 +73,41 @@ $arr6=['mobile','tablet'];
 $newar=array_merge($arr2,$arr3,$arr4);// index and mutidimension
 $newar1=array_merge($arr2,$arr3,$arr1);// index andassociative
 $newar2=array_merge($arr4,$arr5);// associative itslf
-
+$newar3=$arr2+$arr3; //can also join
 print_r($newar);
 echo "<br>";
 print_r($newar1);
 echo "<br>";
 print_r($newar2);
-?>
+echo "<br>";
+print_r($newar3);
+echo "<br>";
+//array_merge_recursive  ( ) 
+$newar4=array_merge_recursive($arr4,$arr5);
+print_r($newar4);
+echo "<br>";
+//array_combine ()
+$arr7=['men','women'];
+$newar5=array_combine($arr6,$arr7);
+print_r($newar5);
+echo "<br>";
+//array_slice give specific array elements 
+$lastar=['honda','civic','cultus','meridies','mehran','corola'];
+$latestar=array_slice($lastar,2,3);
+print_r($latestar);
+echo "<br>";
+$latestar1=array_slice($lastar,-3,3,true);
+print_r($latestar1);
+echo "<br>";
+//array_splice() delte or replace specfic array elements (detail in js note)
+$lastar1=['lemozine','daewoo','wagnor'];
+// array_splice($lastar,2,1);
+// array_splice($lastar,2,-1);//delete till last term
+// array_splice($lastar,-1);//delete only last term
+//  array_splice($lastar,0,2,$lastar1); // will replaace first two value
+//  array_splice($lastar,0,count($lastar),$lastar1); // will replaace all values 
+//  array_splice($lastar,2,0,$lastar1); // will replaace  values after 2nd index and nothing delted 
+//  array_splice($lastar,0,0,$lastar1); // will add value at start
+ array_splice($lastar,count($lastar),0,$lastar1); // will add value at end 
+print_r($lastar);
+ ?>
