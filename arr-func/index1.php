@@ -1,0 +1,53 @@
+<?php
+echo "key functions";
+echo "<br>";
+//The array_keys() function returns an array containing the keys.
+$arr1=["a"=>10,"b"=>'20',"c"=>'30'];
+$res=array_keys($arr1);
+print_r($res);
+echo "<br>";
+//The array_keys_first() function returns first key
+$res1=array_key_first($arr1);
+print_r($res1);
+echo "<br>";
+//The array_keys_last() function returns last key
+$res2=array_key_last($arr1);
+print_r($res2);
+echo "<br>";
+//The array_keys_exist() and array_keys() function returns true or false
+$res3=array_key_exists('c',$arr1);
+if($res3){
+    echo "key exist";
+}
+else{
+     echo "key not exist";
+}
+$res3=key_exists('b',$arr1);
+print_r($res3);
+echo "<br>";
+echo "intersct func";
+echo "<br>";
+//array_intersect() takes common values
+$arr2=["a"=>'red','b'=>'20','d'=>'blue','e'=>'30'];
+$arr3=['first'=>'honda','second'=>'ciciv','third'=>'20'];
+$res4=array_intersect($arr1,$arr2);  //20,30
+print_r($res4) ;
+echo "<br>";
+//array_intersect_key() takes  common key "return first array values"
+$res5=array_intersect_key($arr1,$arr2);  //10 ,20
+print_r($res5);
+echo "<br>";
+//array_intersect_assoc() takes  common both key and its value 
+$res6=array_intersect_assoc($arr1,$arr2);  //20
+print_r($res6);
+echo "<br>";
+//array_intersect_uassoc() compares takes  common both key and its value  according user defined function
+function compare($a,$b){
+if($a===$b){
+    return 0;
+}
+return ($a>$b)?1:-1;
+}
+$res7=array_intersect_uassoc($arr1,$arr2,"compare");  // 20
+print_r($res7);
+?>
