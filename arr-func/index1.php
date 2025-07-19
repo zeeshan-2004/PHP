@@ -41,7 +41,8 @@ echo "<br>";
 $res6=array_intersect_assoc($arr1,$arr2);  //20
 print_r($res6);
 echo "<br>";
-//array_intersect_uassoc() compares takes  common both key and its value  according user defined function
+//array_intersect_uassoc() compares takes  common both key and its value  according user defined function 
+echo "array_intersect_uassoc";
 function compare($a,$b){
 if($a===$b){
     return 0;
@@ -52,13 +53,8 @@ $res7=array_intersect_uassoc($arr1,$arr2,"compare");  // 20
 print_r($res7);
 echo "<br>";
 //array_intersect_ukey() takes  common key "return first array values" according user defined function
-function compare1($a,$b){
-if($a===$b){
-    return 0;
-}
-return ($a>$b)?1:-1;
-}
-$res8=array_intersect_ukey($arr1,$arr2,"compare");  // 10,20
+
+$res8=array_intersect_ukey($arr1,$arr2,"strcasecmp");  // 10,20
 print_r($res8);
 echo "<br>";
 //array_uintersect() takes common values according user defined function
@@ -77,4 +73,33 @@ return ($a>$b)?1:-1;
 }
 $res9=array_uintersect_uassoc($arr1,$arr2,"compare","comparevalue");  // 20
 print_r($res9);
+echo "<br>";
+echo "intercept problems";
+$pers1=['name'=>'zeeshan','hobies'=>'cricket','study'=>'graduation','location'=>'faisalabad','DEP'=>'cs','institute'=>'gcuf'];
+$pers2=['name'=>'ali','hobies'=>'cricket','study'=>'GRADUATION','Location'=>'Faisalabad','dep'=>'cs','INSTITUTE'=>'GCUF'];
+$res3=array_intersect($pers1,$pers2);
+print_r($res3);
+echo "<br>";
+$res3=array_intersect($pers1,$pers2);
+print_r($res3);
+echo "<br>";
+
+$res4=array_intersect_assoc($pers1,$pers2);
+print_r($res4);
+echo "<br>";
+$res4=array_intersect_key($pers1,$pers2);
+print_r($res4);
+echo "<br>";
+$res4=array_intersect_ukey($pers1,$pers2,'strcasecmp');
+print_r($res4);
+echo "<br>";
+$res5=array_intersect_uassoc($pers1,$pers2,'strcasecmp');
+print_r($res5);
+echo "<br>";
+$res6=array_uintersect_assoc($pers1,$pers2,'strcasecmp');
+print_r($res6);
+echo "<br>";
+$res6=array_uintersect_uassoc($pers1,$pers2,'strcasecmp','strcasecmp');
+print_r($res6);
+echo "<br>";
 ?>
