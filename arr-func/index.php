@@ -91,7 +91,7 @@ $arr7=['men','women'];
 $newar5=array_combine($arr6,$arr7);
 print_r($newar5);
 echo "<br>";
-//array_slice give specific array elements 
+//array_slice extract specific array elements 
 $lastar=['honda','civic','cultus','meridies','mehran','corola'];
 $latestar=array_slice($lastar,2,3);
 print_r($latestar);
