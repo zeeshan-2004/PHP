@@ -50,4 +50,31 @@ return ($a>$b)?1:-1;
 }
 $res7=array_intersect_uassoc($arr1,$arr2,"compare");  // 20
 print_r($res7);
+echo "<br>";
+//array_intersect_ukey() takes  common key "return first array values" according user defined function
+function compare1($a,$b){
+if($a===$b){
+    return 0;
+}
+return ($a>$b)?1:-1;
+}
+$res8=array_intersect_ukey($arr1,$arr2,"compare");  // 10,20
+print_r($res8);
+echo "<br>";
+//array_uintersect() takes common values according user defined function
+//array_uintersect_uassoc() takes  common both key and its value 
+function compare2($a,$b){
+if($a===$b){
+    return 0;
+}
+return ($a>$b)?1:-1;
+}
+function comparevalue($a,$b){
+   if($a===$b){
+    return 0;
+}
+return ($a>$b)?1:-1; 
+}
+$res9=array_uintersect_uassoc($arr1,$arr2,"compare","comparevalue");  // 20
+print_r($res9);
 ?>
