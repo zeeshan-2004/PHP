@@ -60,4 +60,47 @@ echo "<br>";
 foreach($res4 as $a){
     echo $a.' ';
 }
+//problems
+//traversing
+$fruits = ["apple", "banana", "cherry", "date"];
+foreach($fruits as $a){
+    echo current($fruits).' ';
+  next($fruits);
+
+}
+echo "<br>";
+    end($fruits);
+foreach($fruits as $a){
+   echo current($fruits).' ';
+    prev($fruits);
+
+}
+echo "<br>";
+$users = [
+    ["Alice", "Admin"],
+    ["Bob", "Editor"],
+    ["Charlie", "Subscriber"]
+];
+foreach($users as list($a,$b)){
+ echo "name:$a ,role:$b <br>";
+}
+echo "<br>";
+$student = ["name" => "Alice", "grade" => "A"];
+$extra = ["name" => "Ali", "subject" => "Math"];
+extract($student, EXTR_PREFIX_ALL,'fir');
+echo "the grade of $fir_name is $fir_grade <br>";
+extract($extra,EXTR_PREFIX_ALL,'sec');
+echo "the subjecct of $sec_name is $sec_subject";
+echo "<br>";
+$name = "Tom";
+$age = 22;
+$city = "Paris";
+$lat=compact('name',"age","city");
+print_r($lat);
+echo "<br>";
+$lat1=range('A','Z');
+foreach($lat1 as $a){
+   $lat2=$a.$a.' ';
+    print_r($lat2);
+}
 ?>

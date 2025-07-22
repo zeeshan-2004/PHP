@@ -44,7 +44,7 @@ function sum($a,$b){
 $fin=array_reduce($arr4,'sum');
 print_r($fin,);
 echo "<br>";
-$arr5=[10,20.5,90,50.7,100];
+$arr5=[10,20.5,90,50.7,100,];
 /*sort($arr5);
 print_r($arr5);
 echo "<br>";*/
@@ -59,5 +59,6 @@ $arr6=['1'=>'ali','4'=>'zeeshan','3'=>'ahmad','8'=>'hassan'];
 // print_r($arr6);
 krsort($arr6);
 print_r($arr6);
+echo "<br>";
 
 ?>
