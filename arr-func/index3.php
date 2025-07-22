@@ -34,7 +34,7 @@ array_walk($arr,'fun','has the value');
 $arr2=[$arr,'e'=>'purple','f'=>'yellow'];
 array_walk_recursive($arr2,'fun','has the value');
   echo "<br>";
-//arra_map
+//array_map
 $arr3=[2,4,5,6,3,1,8];
 function square($value){
  return $value*$value;

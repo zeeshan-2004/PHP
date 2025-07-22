@@ -139,4 +139,6 @@ foreach ($employees as $emp) {
     $total+= array_sum($emp['sales']);
 }
 echo ($total);
+echo "<br>";
+
 ?>

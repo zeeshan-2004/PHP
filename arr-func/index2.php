@@ -87,4 +87,6 @@ echo "<br>";
 $fin4=array_product($arr4);
  print_r($fin4);
 echo "<br>";
+
+
 ?>
