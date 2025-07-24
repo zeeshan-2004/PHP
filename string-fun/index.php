@@ -35,4 +35,20 @@ echo strpos($b,'world',8).'<br>';
 echo strrpos($b,'world').'<br>';
 echo stripos($b,'world').'<br>';
 echo strripos($b,'world').'<br>';
+//search
+echo strstr($b,'world').'<br>';//right part
+echo strstr($b,'world',true).'<br>';//left part
+echo stristr($b,'WORLD').'<br>';
+echo strchr($b,'day').'<br>';
+echo strpbrk($b,'h').'<br>';
+echo strpbrk($b,'ni').'<br>';
+//substr( )
+echo substr($b,10).'<br>';
+echo substr($b,-8).'<br>';
+echo substr($b,0,5).'<br>';
+echo substr($b,20,-5).'<br>';
+echo substr($b,-10,-5).'<br>';
+//strrev()
+echo strrev($b).'<br>';
+echo str_shuffle($b).'<br>';
 ?>
