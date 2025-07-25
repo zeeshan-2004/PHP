@@ -51,4 +51,7 @@ echo substr($b,-10,-5).'<br>';
 //strrev()
 echo strrev($b).'<br>';
 echo str_shuffle($b).'<br>';
+//replace
+echo str_replace('world','earth',$b).'<br>';
+
 ?>

@@ -35,6 +35,19 @@ echo "<br>";
 $code = "x7y9qk";
 $res2=strtoupper($code);
 print_r($res2);
+echo "<br>";
 
+$input = "  @@@Hello World!###  ";
+echo trim($input,'@# ').'<br>';
+$command = "###>>>php artisan migrate";
+echo ltrim($command,'#>').'<br>';
+$row = "DATA#_ROW###***";
+echo rtrim($row,'*#').'<br>';
+$invoice = "INV5607";
+if(strlen($invoice)<12){
+echo str_pad($invoice,12,"0",STR_PAD_LEFT).'<br>';
 
+}
+$pattern = "*-";
+echo str_repeat($pattern,20).'<br>';
 ?>
