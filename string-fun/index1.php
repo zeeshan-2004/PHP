@@ -1,4 +1,5 @@
 <?php
+//str_replace
 $str='heloo world,this is nice world';
 echo str_replace('world','earth',$str).'<br>';
 echo str_replace('world',' ',$str).'<br>';
@@ -31,8 +32,21 @@ echo trim($str1,'ldhe').'<br>';
 echo trim($str1).'<br>';//for spaces
 echo ltrim($str1,'he').'<br>';
 echo rtrim($str1,'ld').'<br>';
-$invoice = "INV5607";
-echo str_pad($invoice,0).'<br>';
-
+//compare
+echo strcmp('hello world','hello world').'  ';//0
+echo strcmp('hello world','hello worl').'  ';//+n
+echo strcmp('hello world','hello worlds').'  ';//_n
+echo strncmp('hello world','hello worlds',6).'  ';
+echo strcasecmp('HELLO WORLD','hello world').'  ';
+echo strncasecmp('HELLO WORLD','hello worlds',12).'  ';
+echo strnatcmp('2HELLO WORLD','10hello world').'  ';//for natural or mix data
+echo strnatcasecmp('2HELLO WORLD','2hello WORLD').'  ';//for natural or mix data
+echo substr_compare('HELLO WORLD','hello',6).'  ';
+echo substr_compare('hello world','hello',0,5).'  ';
+echo substr_compare('hello world','hello WORLD',-2,2,true).'  ';//+n
+echo substr_compare('hello world','ld',-2,2,true).'  ';//0
+echo similar_text('hello world','hello earth').'  ';//number of char matches
+echo similar_text('hello world','hello earth',$per).'  ';
+echo 'percentage is :'.$per.'<br>';
 
 ?>
