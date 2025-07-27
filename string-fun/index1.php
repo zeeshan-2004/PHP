@@ -48,5 +48,52 @@ echo substr_compare('hello world','ld',-2,2,true).'  ';//0
 echo similar_text('hello world','hello earth').'  ';//number of char matches
 echo similar_text('hello world','hello earth',$per).'  ';
 echo 'percentage is :'.$per.'<br>';
+//slashes
+$text="Hello 'world' ";
+echo addslashes($text).'   ';
+$newt= addslashes($text);
+echo stripslashes($newt).'   ';
+echo addcslashes($text,'wlH').'   ';
+echo addcslashes($text,'A..Z').'   ';//for all capital letters slashes
+$text1=addcslashes($text,'a..z');//for all small letters slashes
+echo addcslashes($text,'a..f').'   ';//for specific letters slashes
+echo stripslashes($text1).'<br>';
+//htmlentities
+$text2='<a href="http://localhost:8082/zeeshan">"Go to localhost"</a>';
+echo $text2.'  ';
+echo htmlentities($text2).'  ';
+$text3=htmlentities($text2,ENT_QUOTES);
+echo htmlentities($text2,ENT_NOQUOTES).'  ';
+echo html_entity_decode($text3).'  ';
+print_r(get_html_translation_table(HTML_SPECIALCHARS)).'<br><br>';//for table of  encoded char
+// print_r(get_html_translation_table(HTML_ENTITIES));for table of  htmlentities
+//md5 and sha1
+echo "<br>";
+echo 'md5 hex '. md5($text).'  ';
+echo 'md5 binary ' .md5($text,true).'  ';
+echo 'sha1 hex ' .sha1($text).'  ';
+echo 'sha1 binary ' .sha1($text,true).'<br>';
+if(sha1($text)=='29490869a2d17c3ed08a4e54fea1130ce9e95e00'){
+    echo 'password matched';
+    echo "<br>";
+}
+//uunencode and decode
+echo convert_uuencode($text).'<br>';
+    echo "<br>";
+$text4=convert_uuencode($text);
+echo convert_uudecode($text4).'<br>';
+//hex and bin
+echo bin2hex($text).'<br>';
+$text5=bin2hex($text);
+echo hex2bin($text5).'<br>';
+//chr
+$newstr=chr(65);//A
+echo $newstr.'<br>';
+echo chr(bindec('01100010')).'<br>';
+echo chr(hexdec('5A')).'<br>'; 
+//ord
+echo ord('a').'<br>';//97
+echo ord('@').'<br>';
+
 
 ?>

@@ -90,7 +90,36 @@ echo substr($email,$lat+1).'<br>';
 echo strstr($email,'@').'<br>';
 $word = "rhythm";
 echo strpbrk($word,'aeiwou').'<br>';
-
+//compare
+$pass='password321';
+$con='password321';
+$match=strcmp($pass,$con);
+if($match==0){
+  echo 'matched' .'<br>';
+}
+else{
+echo 'not matched'.'<br>';
+}
+$email1=strtoupper('john.doe@example.com');
+$email2='fareedzeeshan.com';
+echo strcasecmp($email,$email1).'<br>';
+$com=substr($email,-4);
+$com1=substr($email2,-4);
+echo strncmp($com,$com1,4).'<br>';
+echo strncasecmp($email,$email1,4).'<br>';
+$nat=["v2", "v10", "v1", "v11"];
+usort($nat,'strnatcmp');
+print_r($nat);
+echo '<br>';
+$nat1=["Level10", "level2", "LEVEL1"];
+usort($nat1,'strnatcasecmp');
+print_r($nat1);
+echo '<br>';
+$perc=similar_text($text,$comment,$per);
+echo $per.'<br>';
+echo substr_compare($email,'.com',-4);
+$lat2="hello world & test";
+echo  convert_uuencode($lat2).'<br>';
 
 
 ?>
