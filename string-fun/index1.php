@@ -94,6 +94,9 @@ echo chr(hexdec('5A')).'<br>';
 //ord
 echo ord('a').'<br>';//97
 echo ord('@').'<br>';
-
+$str='hello <b>world</b>,hello <i>earth</i>';
+echo strip_tags($str,"<b>").'<br>';
+$str1='hello world is nice';
+echo wordwrap($str1,5,'<br>',true);
 
 ?>
