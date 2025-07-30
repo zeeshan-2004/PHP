@@ -1,0 +1,54 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.head{
+  display: flex;
+  align-items: center;
+    background-color: red; 
+    min-height: 100px;
+    padding-left: 20px;
+}
+.list{
+    display: flex;
+    gap:20px;
+    background-color: blue;
+
+    justify-content: left;
+
+}
+.list li{ 
+    list-style: none;
+    padding: 10px;
+}
+.list li a{
+   margin: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+.main{
+    display: flex;
+}
+.content{
+    flex: 3;
+    background-color: rgb(228, 225, 225);
+    padding: 20px;
+
+}
+.sidebar{
+    flex:1;
+padding: 30px;
+background-color: azure;
+ background-color: red !important;
+}
+.sidebar li{
+    font-size: 20px;
+    
+}
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    background-color: red;
+}
