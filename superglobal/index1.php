@@ -1,30 +1,38 @@
 <?php
-// print_r($_GET);
-// echo $_GET['fname'];
-// echo "<br>";
-// print_r($_POST);
-// echo $_POST['fname'];
-// print_r($_REQUEST);
-// echo $_REQUEST['fname'];
-// echo "<br>";
-// print_r($_SERVER);
-// echo $_SERVER['PHP_SELF'].'  ';
-// echo $_SERVER['HTTP_HOST'];
-// echo 'cokkie is :'.$_COOKIE['user'];
+print_r($_GET);
+echo $_GET['fname'];
+echo "<br>";
+print_r($_POST);
+echo $_POST['fname'];
+print_r($_REQUEST);
+echo $_REQUEST['fname'];
+echo "<br>";
+print_r($_SERVER);
+echo $_SERVER['PHP_SELF'].'  ';
+echo $_SERVER['HTTP_HOST'];
+echo 'cokkie is :'.$_COOKIE['user'];
 session_start();
 
 ?>
+<?php
+$welcome = "Welcome!";
+if (isset($_COOKIE['remember'])) {
+    $welcome = "Welcome back, " . htmlspecialchars($_COOKIE['remember']) . "!";
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
-    <?php
-    if(isset($_SESSION['favcolor'])){
-        echo 'session color is :'.$_SESSION['favcolor'];
-    }  ?>
+    <h2><?php echo $welcome; ?></h2>
+
+    <?php if (isset($_COOKIE['remember'])): ?>
+        <p><a href="logout.php">Logout</a></p>
+    <?php else: ?>
+        <p><a href="login.php">Login</a></p>
+    <?php endif; ?>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 $cokname="user";
 $cokval='this is cokie';
-setcookie($cokname,$cokval,time()+(86400*30),'/');
+setcookie($cokname,$cokval,time()+(86400*30),'/');//print in index1
 ?>
 <!DOCTYPE html>
 <html lang="en">
