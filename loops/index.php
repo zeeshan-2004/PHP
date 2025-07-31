@@ -62,7 +62,7 @@ for ($i=1; $i <= 5; $i++) {
 echo "number is :".$i . "<br>";
 }
   echo "<br>";
-//break
+//breakgi
 for ($i=1; $i <= 10; $i++) { 
     if($i==3){
       break;// breajk at 2
@@ -78,6 +78,12 @@ echo "hello world 3";
 echo "hello world 4";
 abc:
 echo " this is label abc";
+echo '<br>';
+//die
+echo 'this is first line <br>';
+echo 'this is secind line <br>';
+die();
+echo 'this is third line <br>';
 
 
 ?>
