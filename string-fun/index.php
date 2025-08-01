@@ -51,7 +51,9 @@ echo substr($b,-10,-5).'<br>';
 //strrev()
 echo strrev($b).'<br>';
 echo str_shuffle($b).'<br>';
-//replace
-echo str_replace('world','earth',$b).'<br>';
+//preg_replce
+$strnew='the quick brown fox jumps over the lazy dog';
+$strfin=preg_replace('/the/','That',$strnew);
+echo $strfin;
 
 ?>

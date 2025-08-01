@@ -16,6 +16,10 @@ echo substr_replace($str,'earth',6).'<br>';
 echo substr_replace($str,'earth',6,10).'<br>';
 echo substr_replace($str,'earth',6,-6).'<br>';
 echo strtr($str,'or','ie').'<br>';
+//preg_replce
+$strnew='the quick brown fox jumps over the lazy dog';
+$strfin=preg_replace('/the/','That',$strnew);
+echo $strfin;
 //str_pad
 $str1='hello world';
 echo str_pad($str1,15,'.').'<br>';
@@ -98,5 +102,9 @@ $str='hello <b>world</b>,hello <i>earth</i>';
 echo strip_tags($str,"<b>").'<br>';
 $str1='hello world is nice';
 echo wordwrap($str1,5,'<br>',true);
+//basename Return filename from the specified path
+$str4="https://www.w3resource.com/index.php";
+$str5=basename($str4,'.php');
+echo $str5;//index
 
 ?>
