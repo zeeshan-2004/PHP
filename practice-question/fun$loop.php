@@ -71,4 +71,22 @@ for($i=$n;$i>=1;$i--){
     echo "<br>";
    }
    echo "<br>";
+   $strlat='rrrrhelorrrr';
+   $r=0;
+   for($i=0;$i<strlen($strlat);$i++){
+    if($strlat[$i]=='r'){
+  $r++;
+    }
+
+   }
+   echo $r."<br>";
+   echo "<table cellpadding='3px' cellspacing='0px' border='1'>";
+   for($i=1;$i<=5;$i++){
+    echo "<tr>";
+    for($j=1;$j<=5;$j++){
+      echo  "<td> $i*$j=".$i*$j ."</td>";
+    }
+    echo "</tr>";
+   }
+echo "</table>";
 ?>
