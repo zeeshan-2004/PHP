@@ -20,6 +20,7 @@ echo 'neg floor '.floor(-2.4).' ';
 echo 'above .5 round  '.round(1.6).' ';
 echo 'less .5 round '.round(1.4).' ';
 echo '.5 round '.round(1.5).' ';
+echo(round('1.67',1)).' ';//for one deciaml 
 echo 'neg abs '.abs(-1).' ';
 echo 'pos abs '.abs(1).' ';
 echo "<br>";

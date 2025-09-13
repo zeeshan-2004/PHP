@@ -11,7 +11,6 @@ echo "<br>";
  echo $arr[$res1[1]];
  echo "<br>";
 //array_shuffle
-
 $arr1=['first','second','third','fourth'];
 /*shuffle($arr1);
 print_r($arr1);

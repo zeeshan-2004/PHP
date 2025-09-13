@@ -39,5 +39,31 @@ echo "<br>";
 
 const age=22;
 echo age;
-
+echo "<br>";
+//practice
+//swap
+$a = 15;
+$b = 30;
+$a=$a+$b;//45
+$b=$a-$b;//15
+$a=$a-$b;//30
+echo "value of a is $a and value of b is $b";
+echo "<br>";
+$x="name";
+$$x="zeeshan";
+echo $name."<br>";
+echo $$x;
+echo "<br>";
+$arr=['zeeshan',"ahmad","ali"];
+for($i=0;$i<count($arr);$i++){
+    $varname="student".($i+1);
+    $$varname=$arr[$i];
+}
+echo $student1." ".$student2." ".$student3."<br>";
+//typecasting
+$num = "150";
+$intnum=(int)$num;
+echo gettype($num);
+echo "<br>";
+echo gettype($intnum);
 ?>

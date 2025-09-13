@@ -28,6 +28,8 @@ echo "<br>";
 //full date
 echo 'full date :'.date('d/m/Y');
 echo "<br>";
+echo date('l \t\h\e jS');// Saturday the 2nd
+echo "<br>";
 //set timezone
 date_default_timezone_set('Asia/Karachi');
 echo date('e');//check timezone
@@ -41,11 +43,14 @@ echo date('s') ."  ";
 echo date('a') ."  ";
 echo date('A') ."  ";
 echo date('d-m-Y H:i:s a') ."  ";
-//strtotime returns time according to string
+ //timestamp (the number of seconds since January 1 1970 00:00:00 GMT).
+//strtotime returns time according to string in seconds
 echo date('d-m-Y',strtotime('now'))."  ";
 echo date('d-m-Y',strtotime('26 june 2004'))."  ";
 echo date('d-m-Y h-i-s',strtotime('+1 week 5 days 1 hour 10 min'))."  "; 
 echo date('d-m-Y h-i-s',strtotime('next monday'))."  "; 
+$dat='2012-12-19';
+echo date('m-d-Y',strtotime($dat));
 echo "<br>";
 //Mktime gmmktime are used to set old date and time
 echo date('d-m-Y',mktime(12,10,30,6,26,2004))."  ";//26-06-2004
@@ -68,6 +73,11 @@ $diff=date_diff($date1,$date2);
 echo $diff->days;//only days
 // print_r($diff);complete diff
 echo "<br>";
+$db=date_create("2004-06-26");
+$dl=date_create();//today date
+$dif=date_diff($db,$dl);
+echo $dif->days;
+echo "<br>";
 //date_add
 $date=date_create('2025-6-26');
 date_add($date,date_interval_create_from_date_string("30 days"));
@@ -78,7 +88,7 @@ $date=date_create('2025-6-26');
 date_sub($date,date_interval_create_from_date_string("30 days"));
 echo date_format($date,'d-m-Y');
 echo "<br>";
-//date_diff works both date_sub and data_add
+//date_modify works both date_sub and data_add
 $date=date_create('2025-6-26');
 date_modify($date,"30 days");
 echo date_format($date,'d-m-Y')."  ";
