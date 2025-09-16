@@ -86,8 +86,41 @@ echo $enc . "<br>";
 echo 'lenght'.strlen($enc) . "<br>";
 $dec=convert_uudecode($enc);
 echo $dec;
-
-
-
+echo "<br>";
+$strnew="The cat chased the other cat and another cat";
+$word="cat";
+$position=[];
+$offset=0;
+while(($pos=strpos($strnew,$word,$offset))!==false){
+  $position[]=$pos;
+  $offset=$pos+strlen($word);
+}
+$count=count($position);
+echo "found $count times at [".implode(",",$position). "]";
+echo "<br>";
+$mask="zeeshan@example.com";
+echo strlen($mask). "<br>";
+echo substr_replace($mask,"****",1,5);
+echo "<br>";
+$strn1="Programming in PHP is interesting and challenging";
+echo strlen($strn1);
+echo str_word_count($strn1);
+$exp=explode(" ",$strn1);
+print_r($exp);
+echo "<br>";
+$max=0;
+for($i=0;$i<count($exp);$i++){
+   $max=$exp[0];   
+   if($max>$exp[$i]) {
+    $max=$exp[$i];
+   }
+}
+echo $max."<br>";
+echo wordwrap($strn1,15,"<br>");
+$url = "https://www.example.com/products/index.php?id=12";
+print_r(parse_url($url));
+echo "<br>";
+echo parse_url($url,PHP_URL_HOST);
 
 ?>
+    

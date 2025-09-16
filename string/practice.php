@@ -112,4 +112,16 @@ echo substr($email,strpos($email,"@")+1);
       $text = "123abcDEF";
 echo preg_replace("/[^a-zA-Z]/", "", strrev($text));
 
+        echo "<br>";
+$str="The cat chased the other cat and another cat";
+$word="cat";
+$position=[];
+$offset=0;
+while(($pos=strpos($str,$cat,$offset))!==false){
+  $position=$pos;
+  $offset=$pos+strlen($word);
+}
+$count=count($position);
+echo "found $account at position ";
+
 ?>
