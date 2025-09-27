@@ -98,6 +98,39 @@ foreach($arr1 as $a){
     }
     echo "<br>";
 }
+$max=$numbers[0];
+for($i=0;$i<count($numbers);$i++){
+ if($numbers[$i]>$max){
+    $max=$numbers[$i];
+ }
+}
+echo $max;
+ echo " ";
+ $total=0;
+ foreach($numbers as $a){
+    $total+=$a;
+ }
+ echo $total;
+ echo " ";
+$empl=[
+    ["cs", 80, 70, 90],
+    ["IT", 65, 75, 85],
+    ["IS", 65, 75, 85]
+];
+for($i=0;$i<count($empl);$i++){
+    if($empl[$i][0]==="IT"){
+        for($j=0;$j<count($empl[$i]);$j++){
+            print_r($empl[$i][$j]);
+            echo " ";
+        }
+    }
+}
+$item = ["toffe" =>10, "kulfi" =>50, "shawarma" =>200,"lays"=>20];
+asort($item);
+// foreach($item as $a){
+    
+// }
+print_r($item);
 // ?>
 
 
