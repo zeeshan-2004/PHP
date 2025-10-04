@@ -89,23 +89,5 @@ for($row=0;$row<count($arrlat);$row++){
     echo "<br>";
 }
 echo "<br>";
-//methods
-array_push($names,"ahsan","zeeshan","hanan");
-print_r($names);
-$del=array_splice($names,-1,1);
-print_r($del);
-$del1=array_splice($names,0,1);
-print_r($del1);
-array_splice($names,0,0,"first");
-print_r($names);
-if(in_array("first",$names)!=false){
- echo "first has found";     
-}
-if(in_array($student["ahmad"],$student)!=false){
- echo "ahmad has found";    
-}
-$res=array_keys($student);
-print_r($res);
-$res1=array_reverse($numbers);
-print_r($res1);
+
  ?>
