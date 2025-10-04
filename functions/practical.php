@@ -73,5 +73,55 @@ echo $a;
  $b="hello";
 val($b);
 echo $b;
+echo "<br>";
+//practice
 
+function sumdigit($a){
+$sum=0;
+  $b=str_split($a);
+foreach($b as $c){
+  $sum=$c+$sum;
+}
+echo "$sum  ";
+}
+sumdigit(3456);
+function even($a){
+if($a%2==0){
+  echo "true  ";
+}
+else{
+  echo "false  ";
+}
+}
+even(11);
+function fic($a=5){
+$fic=1;
+
+   for($i=1;$i<=$a;$i++){
+    $fic=$i*$fic;
+   }
+   echo "fictorial of $a is $fic ";
+}
+fic();
+function greet($name){
+echo "hello $name ";
+}
+function bye($name){
+  echo "hello $name ";
+}
+$fun1="greet";
+$fun2="bye";
+$fun1("zeeshan");
+$fun2("ali");
+function fib($a){
+$pre=0;
+$post=1;
+for($i=0;$i<$a;$i++){
+ $curr=$pre+$post;
+$pre=$post;
+$post=$curr;
+}
+echo "$pre";
+}
+fib(6);
 ?>
