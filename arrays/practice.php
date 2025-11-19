@@ -30,20 +30,20 @@ foreach($capitals as $x=>$y){
 }
 
 // multidimensional array
-// $students = [
-//     ["Alice", 80, 70, 90],
-//     ["Bob", 65, 75, 85]
-// ];
-// for ($i=0; $i < count($students); $i++) { 
-//     $name=$students[$i][0];
-//     $total=0;
-//     for ($j=0; $j <count($students[$i]) ; $j++) { 
-//         $total+=$students[$i][$j];
-//     }
-//     echo "$name:$total ";
-//           echo "<br>";
+$students = [
+    ["Alice", 80, 70, 90],
+    ["Bob", 65, 75, 85]
+];
+for ($i=0; $i < count($students); $i++) { 
+    $name=$students[$i][0];
+    $total=0;
+    for ($j=0; $j <count($students[$i]) ; $j++) { 
+        $total+=$students[$i][$j];
+    }
+    echo "$name:$total ";
+          echo "<br>";
 
-// }
+}
 
 $students = [
     ["Alice", 80, 70, 90],
@@ -131,6 +131,6 @@ asort($item);
     
 // }
 print_r($item);
-// ?>
+ ?>
 
 
